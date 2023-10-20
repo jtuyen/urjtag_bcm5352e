@@ -20,7 +20,7 @@ Potential flash base address: [0x0], [0x0]
 Processor successfully switched in debug mode.
 ```
 3. optional: `initbus ejtag_dma`
-4. detectflash 0x1fc00000
+4. change flash memory location if required: `detectflash 0x1fc00000`
 ```
 Query identification string:
 	Primary Algorithm Command Set and Control Interface ID Code: 0x0002 (AMD/Fujitsu Standard Command Set)
