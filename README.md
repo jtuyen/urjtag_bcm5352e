@@ -1,6 +1,6 @@
 This repo is a urjtag DMA configuration for Broadcom bcm5352e. Copy these files to `/usr/local/share/urjtag/broadcom`
 
-Using Tigard, here is a list of brief instructions to interface with the processor:
+Using Tigard board, here is a list of brief `urjtag` instructions to interface with the processor:
 1. `cable ft2232 vid=0x0403 pid=0x6010 interface=1`
 2. `detect`
 ```
