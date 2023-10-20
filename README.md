@@ -20,7 +20,23 @@ Potential flash base address: [0x0], [0x0]
 Processor successfully switched in debug mode.
 ```
 3. optional: `initbus ejtag_dma`
-4. change flash memory location if required: `detectflash 0x1fc00000`
+4. `print`
+```
+ No. Manufacturer              Part                 Stepping Instruction          Register
+-------------------------------------------------------------------------------------------------------------------
+   0 Broadcom                  BCM5352E             V1       EJTAG_CONTROL        EJCONTROL
+
+Active bus:
+*0: EJTAG compatible bus driver via DMA (JTAG part No. 0)
+	start: 0x00000000, length: 0x1E000000, data width: 32 bit, (USEG : User addresses)
+	start: 0x1E000000, length: 0x02000000, data width: 16 bit, (FLASH : Addresses in flash (boot=0x1FC000000))
+	start: 0x20000000, length: 0x60000000, data width: 32 bit, (USEG : User addresses)
+	start: 0x80000000, length: 0x20000000, data width: 32 bit, (KSEG0: Kernel Unmapped Cached)
+	start: 0xA0000000, length: 0x20000000, data width: 32 bit, (KSEG1: Kernel Unmapped Uncached)
+	start: 0xC0000000, length: 0x20000000, data width: 32 bit, (SSEG : Supervisor Mapped)
+	start: 0xE0000000, length: 0x20000000, data width: 32 bit, (KSEG3: Kernel Mapped)
+```
+6. change flash memory location if required: `detectflash 0x1fc00000`
 ```
 Query identification string:
 	Primary Algorithm Command Set and Control Interface ID Code: 0x0002 (AMD/Fujitsu Standard Command Set)
